@@ -23,7 +23,7 @@ class insta_reels_state extends State<insta_reels> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
             extendBody: true,
             extendBodyBehindAppBar: true,
@@ -48,6 +48,15 @@ class insta_reels_state extends State<insta_reels> {
                 onTap: _onItemTap),
             body: TabBarView(
               children: [
+                Container(
+                  decoration: BoxDecoration(
+                    image : DecorationImage(
+                      image : AssetImage('images/guitar_play.jpeg'),
+                      fit : BoxFit.cover
+                    )
+                  ),
+
+                ),
                 Center(
                     child: Text(
                   "anki",
@@ -62,7 +71,7 @@ class insta_reels_state extends State<insta_reels> {
                     child: Text(
                   "Bitto",
                   style: TextStyle(color: Colors.blue),
-                ))
+                )),
               ],
             )));
   }
